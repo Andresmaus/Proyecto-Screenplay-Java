@@ -16,7 +16,7 @@
 
     Ejemplos:
       |usuario|contrasenna|
-      |usuario|contrasenna|
+      |standard_user|secret_sauce|
 
     @LoginFallido
     Esquema del escenario:
@@ -27,4 +27,4 @@
 
       Ejemplos:
         |usuario|contrasenna|
-        |usuario|contrasenna|
+        |locked_out_user|secret_sauce|

@@ -8,16 +8,15 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
-public class DigitarTask implements Task {
-
+public class EscribirTask implements Task {
     private TablaDatos tablaDatos;
 
-    public DigitarTask(TablaDatos tablaDatos) {
+    public EscribirTask(TablaDatos tablaDatos) {
         this.tablaDatos = tablaDatos;
     }
 
-    public static DigitarTask credenciales(TablaDatos tablaDatos) {
-        return Tasks.instrumented(DigitarTask.class, tablaDatos);
+    public static EscribirTask credencialesFallidas(TablaDatos tablaDatos) {
+        return Tasks.instrumented(EscribirTask.class, tablaDatos);
     }
 
     @Override
@@ -25,6 +24,6 @@ public class DigitarTask implements Task {
         actor.attemptsTo(Enter.theValue(tablaDatos.getUsuario()).into(RepositorioLocalizadores.TXT_USUARIO),
                 Enter.theValue(tablaDatos.getContrasenna()).into(RepositorioLocalizadores.TXT_CONTRASENNA),
                 Click.on(RepositorioLocalizadores.BTN_SIGN_IN)
-                );
+        );
     }
 }
