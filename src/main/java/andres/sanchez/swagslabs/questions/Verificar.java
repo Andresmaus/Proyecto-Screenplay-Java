@@ -12,14 +12,6 @@ public class Verificar implements Question {
 
     @Override
     public Object answeredBy(Actor actor) {
-        Boolean resultadoFinal = false;
-        String mensaje = Text.of(RepositorioLocalizadores.LBL_MENSAJE_FALLIDO).viewedBy(actor).asString();
-
-        if (resultadoFinal.equals(mensaje)) {
-            resultadoFinal = true;
-        }else {
-            resultadoFinal = false;
-        }
-        return resultadoFinal;
+        return Text.of(RepositorioLocalizadores.LBL_MENSAJE_FALLIDO).viewedBy(actor).asString();
     }
 }
